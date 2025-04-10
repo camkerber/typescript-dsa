@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/algorithms/index.ts","./src/algorithms/sort/bubble-sort.ts","./src/algorithms/sort/index.ts","./src/algorithms/sort/__tests__/bubble-sort.test.ts","./src/data-structures/index.ts"],"version":"5.8.3"}
