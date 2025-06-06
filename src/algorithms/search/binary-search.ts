@@ -1,9 +1,9 @@
 /**
  * This function uses the binary search algorithm to sort an array of numbers
  *
- * @param arr - Sorted array of numbers
- * @param target - Number to search for
- * @returns Index of the `target` param or `-1` if it cannot be found
+ * @param {number[]} arr - Sorted array of numbers
+ * @param {number} target - Number to search for
+ * @return {number} Index of the `target` param or `-1` if it cannot be found
  * @time_complexity quadratic: O(log n)
  */
 export function binarySearch(arr: number[], target: number): number {

@@ -1,8 +1,8 @@
 /**
  * This function uses the insertion sort algorithm to sort an array of numbers
  *
- * @param arr - Array of numbers to be sorted
- * @returns Sorted (in place) array of numbers
+ * @param {number[]} arr - Array of numbers to be sorted
+ * @return {number[]} Sorted (in place) array of numbers
  * @time_complexity quadratic: O(n^2)
  */
 export function insertionSort(arr: number[]): number[] {
