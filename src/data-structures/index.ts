@@ -8,3 +8,4 @@ export * from "./Heap";
 export * from "./MinHeap";
 export * from "./MaxHeap";
 export * from "./PriorityQueue";
+export * from "./RingBuffer";
