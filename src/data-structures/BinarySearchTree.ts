@@ -4,7 +4,7 @@ type Node<T> = {
   right?: Node<T>;
 };
 
-export type Comparator<T> = (a: T, b: T) => number;
+export type BSTComparator<T> = (a: T, b: T) => number;
 
 export interface IBinarySearchTree<T> {
   insert: (value: T) => void;
@@ -27,10 +27,10 @@ const defaultCompare = <T>(a: T, b: T): number => {
  */
 export class BinarySearchTree<T> implements IBinarySearchTree<T> {
   private root?: Node<T>;
-  private compare: Comparator<T>;
+  private compare: BSTComparator<T>;
   public size: number;
 
-  constructor(compare: Comparator<T> = defaultCompare) {
+  constructor(compare: BSTComparator<T> = defaultCompare) {
     this.root = undefined;
     this.compare = compare;
     this.size = 0;
