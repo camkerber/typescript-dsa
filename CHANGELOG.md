@@ -1,5 +1,11 @@
 # @camkerber/typescript-dsa
 
+## 1.1.0
+
+### Minor Changes
+
+- 8127d23: Added new data structure: ring buffer
+
 ## 1.0.0
 
 ### Major Changes
