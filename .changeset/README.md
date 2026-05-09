@@ -7,9 +7,11 @@ This folder is managed by [`@changesets/cli`](https://github.com/changesets/chan
 1. **Make your changes** on a feature branch.
 
 2. **Create a changeset** describing what changed and the bump type:
+
    ```bash
    pnpm changeset
    ```
+
    Select `patch`, `minor`, or `major` and write a short summary. This generates a `.changeset/*.md` file.
 
 3. **Commit the changeset file** alongside your code changes and open a PR.
@@ -20,8 +22,8 @@ This folder is managed by [`@changesets/cli`](https://github.com/changesets/chan
 
 ## Bump type guide
 
-| Type | When to use |
-|------|-------------|
-| `patch` | Bug fixes, internal refactors, doc updates |
+| Type    | When to use                                  |
+| ------- | -------------------------------------------- |
+| `patch` | Bug fixes, internal refactors, doc updates   |
 | `minor` | New backwards-compatible features or exports |
-| `major` | Breaking changes to the public API |
+| `major` | Breaking changes to the public API           |
