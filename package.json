@@ -28,7 +28,7 @@
     "build": "tsc",
     "test": "jest",
     "ci:check": "tsc --noEmit && eslint . && prettier . --check && jest",
-    "ci:publish": "pnpm build && pnpm publish --access=public --no-git-checks"
+    "ci:publish": "pnpm build && pnpm changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
