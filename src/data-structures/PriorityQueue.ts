@@ -71,9 +71,9 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
    * @returns `true` if a matching item was found and reprioritized.
    */
   increasePriority(value: T, newPriority: number): boolean {
-    return this.heap.updateWhere(
-      (node) => node.value === value,
-      {value, priority: newPriority},
-    );
+    return this.heap.updateWhere((node) => node.value === value, {
+      value,
+      priority: newPriority,
+    });
   }
 }

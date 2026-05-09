@@ -1,4 +1,4 @@
-export type Comparator<T> = (a: T, b: T) => number;
+export type HeapComparator<T> = (a: T, b: T) => number;
 
 export interface IHeap<T> {
   peek: () => T | undefined;
@@ -29,9 +29,12 @@ const defaultMinCompare = <T>(a: T, b: T): number => {
  */
 export class Heap<T> implements IHeap<T> {
   protected heap: T[];
-  protected compare: Comparator<T>;
+  protected compare: HeapComparator<T>;
 
-  constructor(compare: Comparator<T> = defaultMinCompare, values: T[] = []) {
+  constructor(
+    compare: HeapComparator<T> = defaultMinCompare,
+    values: T[] = [],
+  ) {
     this.compare = compare;
     this.heap = [];
     if (values.length > 0) this.heapify(values);
@@ -172,7 +175,10 @@ export class Heap<T> implements IHeap<T> {
     while (index > 0) {
       const parent = (index - 1) >> 1;
       if (this.compare(this.heap[index], this.heap[parent]) < 0) {
-        [this.heap[index], this.heap[parent]] = [this.heap[parent], this.heap[index]];
+        [this.heap[index], this.heap[parent]] = [
+          this.heap[parent],
+          this.heap[index],
+        ];
         index = parent;
       } else {
         break;
@@ -186,8 +192,10 @@ export class Heap<T> implements IHeap<T> {
       const left = 2 * index + 1;
       const right = 2 * index + 2;
       let best = index;
-      if (left < n && this.compare(this.heap[left], this.heap[best]) < 0) best = left;
-      if (right < n && this.compare(this.heap[right], this.heap[best]) < 0) best = right;
+      if (left < n && this.compare(this.heap[left], this.heap[best]) < 0)
+        best = left;
+      if (right < n && this.compare(this.heap[right], this.heap[best]) < 0)
+        best = right;
       if (best === index) break;
       [this.heap[index], this.heap[best]] = [this.heap[best], this.heap[index]];
       index = best;
